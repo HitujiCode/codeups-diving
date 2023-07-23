@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.price-item {
+}
+
+.price-item__title {
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(24 / 16);
+    border-bottom: 1px solid $accent;
+    padding-bottom: rem(4);
+}
+
+.price-item__wrap {
+    margin-top: rem(8);
+    display: flex;
+}
+
+.price-item__name,
+.price-item__price {
+    font-size: rem(14);
+    font-weight: $normal;
+    line-height: calc(24 / 14);
+
+    @include mq("md") {
+        font-size: rem(16);
+        line-height: calc(24 / 16);
+    }
+}
+
+.price-item__price {
+    margin-left: auto;
+}

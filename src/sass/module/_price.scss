@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.price {
+    background-color: $green2;
+    position: relative;
+}
+
+.price__inner {
+}
+
+.price__title {
+}
+
+.price__cotainer {
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(40);
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 8.61%;
+    }
+}
+
+.price__img {
+    aspect-ratio: 345/227;
+
+    @include mq("md") {
+        aspect-ratio: 492/746;
+        width: 45.56%;
+    }
+}
+
+.price__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price__items {
+    margin-top: rem(40);
+
+    @include mq("md") {
+        flex: 1;
+        margin-top: 0;
+    }
+}
+
+.price__item:not(:first-child) {
+    margin-top: rem(40);
+}
+
+.price__button {
+    margin-top: rem(40);
+    text-align: center;
+    padding-bottom: rem(4);
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.price__fish {
+    width: rem(437);
+    height: rem(201);
+    position: absolute;
+    bottom: rem(56);
+    left: calc(50% - min(49vw, 38.75rem));
+}
+
+.price__fish img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

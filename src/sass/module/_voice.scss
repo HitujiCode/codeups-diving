@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.voice {
+}
+
+.voice__inner {
+}
+
+.voice__container {
+    position: relative;
+    margin-top: rem(40);
+}
+
+.voice__title {
+}
+
+.voice__cards {
+    display: grid;
+    gap: rem(40);
+
+    @include mq("md") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.voice__card {
+    width: 100%;
+    max-width: rem(520);
+    margin: 0 auto;
+}
+
+.voice__button {
+    text-align: center;
+    margin-top: rem(40);
+    padding-bottom: rem(4);
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.voice__fish {
+    width: rem(301);
+    height: rem(138);
+    position: absolute;
+    top: rem(-216);
+    left: calc(50% - min(49vw, 38.75rem));
+}
+
+.voice__fish img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.voice__dragon {
+    width: rem(71);
+    height: rem(162);
+    position: absolute;
+    bottom: rem(-67);
+    right: 0;
+}
+
+.voice__dragon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

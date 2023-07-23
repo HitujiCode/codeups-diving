@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.sp-nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $accent;
+    opacity: 0;
+    left: -100%;
+    transition:
+        left 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+}
+
+.sp-nav.is-active {
+    opacity: 1;
+    left: 0;
+}
+
+.sp-nav__inner {
+    padding: 0 rem(15);
+}
+
+.sp-nav__box {
+    display: flex;
+    overflow: auto;
+    overscroll-behavior: none;
+    width: 100%;
+    height: 100vh;
+}
+
+.sp-nav__container {
+    width: 100%;
+    padding-top: rem(12);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sp-nav__left,
+.sp-nav__right {
+    gap: rem(16);
+    display: grid;
+    align-content: start;
+    padding-bottom: rem(50);
+}
+
+.sp-nav__items {
+}
+
+.sp-nav__item {
+    color: $white;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(18 / 16);
+    padding-left: rem(22);
+}
+
+.sp-nav__title {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding: rem(12) 0;
+}
+
+.sp-nav__title::before {
+    content: "";
+    position: absolute;
+    top: rem(12);
+    left: rem(-22);
+    background-image: url(../../assets/images/common/hitode.svg);
+    width: rem(18);
+    height: rem(18);
+}
+
+.sp-nav__sub-items {
+}
+
+.sp-nav__sub-item {
+    font-weight: $normal;
+}
+
+.sp-nav__sub-item a {
+    display: inline-block;
+    width: 100%;
+    padding: rem(12) 0;
+}

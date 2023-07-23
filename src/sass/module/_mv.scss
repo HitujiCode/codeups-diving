@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.mv {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: rem(400);
+}
+
+.mv__inner {
+    height: inherit;
+}
+
+.mv__swiper {
+    height: inherit;
+
+    .swiper-wrapper {
+        height: inherit;
+    }
+
+    .swiper-slide {
+        height: inherit;
+    }
+
+    .swiper-slide img {
+        aspect-ratio: 375/667;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include mq("md") {
+            aspect-ratio: 1440/768;
+        }
+    }
+}
+
+.mv__title {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    @include mq("md") {
+        top: 47%;
+    }
+}

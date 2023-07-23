@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.pc-nav {
+    height: inherit;
+}
+
+.pc-nav__items {
+    display: flex;
+    height: inherit;
+}
+
+.pc-nav__item {
+    height: inherit;
+    text-align: center;
+    color: $white;
+    position: relative;
+}
+
+.pc-nav__item a {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    height: inherit;
+    padding: 0 min(1.4vw, rem(20));
+}
+
+.pc-nav__item-en {
+    font-family: $third-font-family;
+    font-size: rem(18);
+    font-weight: $normal;
+    line-height: 1;
+}
+
+.pc-nav__item-en--faq {
+    @extend .pc-nav__item-en;
+    text-transform: uppercase;
+}
+
+.pc-nav__item-ja {
+    margin-top: rem(4);
+    font-size: rem(10);
+    font-weight: $normal;
+    line-height: calc(15 / 10);
+}
+
+// ホバー
+.pc-nav__item::after {
+    position: absolute;
+    bottom: rem(23);
+    left: 50%;
+    width: 0;
+    height: 1px;
+    content: "";
+    transition: all 0.3s ease 0s;
+    transform: translateX(-50%);
+    background-color: $white;
+}
+
+.pc-nav__item:hover::after,
+.pc-nav__item.is-active::after {
+    width: calc(100% - rem(32));
+}

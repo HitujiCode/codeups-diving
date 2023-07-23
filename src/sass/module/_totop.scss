@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.totop {
+    position: fixed;
+    width: rem(48);
+    height: rem(48);
+    right: rem(16);
+    z-index: 300;
+    padding: 0;
+    display: block;
+
+    @include mq("md") {
+        width: rem(80);
+        height: rem(80);
+        right: rem(20);
+    }
+}
+
+.totop img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
