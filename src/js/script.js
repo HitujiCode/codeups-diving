@@ -1,29 +1,29 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-// ローディング
-// $(window).on('load', function() {
-//   setTimeout(function() {
-//       $(".loader__title--green").addClass("is-active");
-//   }, 100);
-//   setTimeout(function() {
-//       $(".loader__left").addClass("is-active");
-//   }, 1500);
-//   setTimeout(function() {
-//       $(".loader__right").addClass("is-active");
-//   }, 1580);
-//   setTimeout(function() {
-//       $(".loader__title").addClass("is-active");
-//   }, 3000);
-// });
+ローディング
+$(window).on('load', function() {
+  setTimeout(function() {
+      $(".loader__title--green").addClass("is-active");
+  }, 100);
+  setTimeout(function() {
+      $(".loader__left").addClass("is-active");
+  }, 1500);
+  setTimeout(function() {
+      $(".loader__right").addClass("is-active");
+  }, 1580);
+  setTimeout(function() {
+      $(".loader__title").addClass("is-active");
+  }, 3000);
+});
 
-// $(".loader__title").on('animationend', function() {
-//   setTimeout(function() {
-//       $(".loader").animate({ opacity: 0 }, 1000, function() {
-//           $(this).remove();
-//       });
-//   }, 500);
-// });
+$(".loader__title").on('animationend', function() {
+  setTimeout(function() {
+      $(".loader").animate({ opacity: 0 }, 1000, function() {
+          $(this).remove();
+      });
+  }, 500);
+});
 
 
   // ドロワーメニュー
