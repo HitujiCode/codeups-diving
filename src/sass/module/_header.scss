@@ -22,7 +22,6 @@
 
     @include mq("md") {
         padding: 0 min(1.3vw, rem(20));
-        // padding: 0 rem(20);
     }
 }
 
@@ -33,7 +32,6 @@
 
     @include mq("md") {
         width: rem(173);
-        // padding-left: rem(20);
         padding-left: min(1.3vw, rem(20));
     }
 }
