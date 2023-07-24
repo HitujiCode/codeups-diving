@@ -1,7 +1,7 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-ローディング
+// ローディング
 $(window).on('load', function() {
   setTimeout(function() {
       $(".loader__title--green").addClass("is-active");
