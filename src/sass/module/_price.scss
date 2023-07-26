@@ -5,6 +5,21 @@
     position: relative;
 }
 
+.price::after {
+    @include mq("md") {
+        content: "";
+        position: absolute;
+        background-image: url(../../assets/images/common/kingyo-price.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: rem(437);
+        height: rem(201);
+        bottom: rem(56);
+        left: calc(50% - min(49vw, 38.75rem));
+    }
+}
+
 .price__inner {
 }
 
@@ -58,18 +73,4 @@
     @include mq("md") {
         margin-top: rem(80);
     }
-}
-
-.price__fish {
-    width: rem(437);
-    height: rem(201);
-    position: absolute;
-    bottom: rem(56);
-    left: calc(50% - min(49vw, 38.75rem));
-}
-
-.price__fish img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }

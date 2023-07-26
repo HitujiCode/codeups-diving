@@ -21,7 +21,7 @@
     display: flex;
 
     @include mq("md") {
-        padding: 0 min(1.3vw, rem(20));
+        padding: 0 min(1.4vw, rem(20));
     }
 }
 

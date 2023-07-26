@@ -50,6 +50,7 @@
 }
 
 .sp-nav__item {
+    position: relative;
     color: $white;
     font-size: rem(16);
     font-weight: $bold;
@@ -57,18 +58,17 @@
     padding-left: rem(22);
 }
 
-.sp-nav__title {
+.sp-nav__item a {
     width: 100%;
     display: inline-block;
-    position: relative;
     padding: rem(12) 0;
 }
 
-.sp-nav__title::before {
+.sp-nav__item::before {
     content: "";
     position: absolute;
     top: rem(12);
-    left: rem(-22);
+    left: 0;
     background-image: url(../../assets/images/common/hitode.svg);
     width: rem(18);
     height: rem(18);

@@ -28,6 +28,11 @@
     }
 }
 
+.price-item__name {
+    flex: 1;
+}
+
 .price-item__price {
-    margin-left: auto;
+    width: 26.67%;
+    text-align: right;
 }

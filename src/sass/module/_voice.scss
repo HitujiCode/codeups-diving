@@ -6,27 +6,44 @@
 .voice__inner {
 }
 
-.voice__container {
-    position: relative;
-    margin-top: rem(40);
-}
-
 .voice__title {
 }
 
 .voice__cards {
+    position: relative;
+    margin-top: rem(40);
     display: grid;
     gap: rem(40);
+}
 
+.voice__cards::before {
     @include mq("md") {
-        grid-template-columns: repeat(2, 1fr);
+        content: "";
+        position: absolute;
+        top: rem(-216);
+        left: calc(50% - min(49vw, 38.75rem));
+        background-image: url(../../assets/images/common/kingyo-voice.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: rem(301);
+        height: rem(138);
     }
 }
 
-.voice__card {
-    width: 100%;
-    max-width: rem(520);
-    margin: 0 auto;
+.voice__cards::after {
+    @include mq("md") {
+        content: "";
+        position: absolute;
+        bottom: rem(-205);
+        right: 0;
+        background-image: url(../../assets/images/common/tatu.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: rem(71);
+        height: rem(162);
+    }
 }
 
 .voice__button {
@@ -37,32 +54,4 @@
     @include mq("md") {
         margin-top: rem(80);
     }
-}
-
-.voice__fish {
-    width: rem(301);
-    height: rem(138);
-    position: absolute;
-    top: rem(-216);
-    left: calc(50% - min(49vw, 38.75rem));
-}
-
-.voice__fish img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.voice__dragon {
-    width: rem(71);
-    height: rem(162);
-    position: absolute;
-    bottom: rem(-67);
-    right: 0;
-}
-
-.voice__dragon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }

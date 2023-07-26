@@ -43,3 +43,7 @@ body {
   color: $green;
   position: relative;
 }
+
+body.is-fixed {
+  overflow: hidden;
+}

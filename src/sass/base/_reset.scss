@@ -116,9 +116,3 @@ a {
   color: inherit;
   transition: opacity 0.3s;
 }
-
-/* スワイパー*/
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none;
-}

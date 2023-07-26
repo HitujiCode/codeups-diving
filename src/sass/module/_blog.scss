@@ -4,6 +4,21 @@
     position: relative;
 }
 
+.blog::after {
+    @include mq("md") {
+        content: "";
+        position: absolute;
+        background-image: url(../../assets/images/common/kingyo-blog.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: rem(437);
+        height: rem(201);
+        top: rem(28);
+        left: calc(50% - min(49vw, rem(622)));
+    }
+}
+
 .blog__bg {
     @include mq("md") {
         width: 100%;
@@ -24,18 +39,10 @@
     margin-top: rem(28);
     display: grid;
     gap: rem(40);
-    justify-content: center;
 
     @include mq("md") {
         margin-top: rem(80);
-        grid-template-columns: repeat(3, 1fr);
     }
-}
-
-.blog__card {
-    display: flex;
-    width: 100%;
-    max-width: rem(333);
 }
 
 .blog__button {
@@ -46,18 +53,4 @@
     @include mq("md") {
         margin-top: rem(80);
     }
-}
-
-.blog__fish {
-    width: rem(437);
-    height: rem(201);
-    position: absolute;
-    top: rem(28);
-    left: calc(50% - min(49vw, rem(622)));
-}
-
-.blog__fish img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }

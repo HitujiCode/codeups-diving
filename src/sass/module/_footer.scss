@@ -37,6 +37,7 @@
 .footer__sns-icon {
     display: inline-block;
     width: rem(24);
+    transition: opacity 0.3s ease;
 
     @include mq("md") {
         width: rem(32);
@@ -71,4 +72,9 @@
         font-size: rem(14);
         line-height: calc(18 / 14);
     }
+}
+
+// ホバー
+.footer__sns-icon:hover {
+    opacity: 0.6;
 }

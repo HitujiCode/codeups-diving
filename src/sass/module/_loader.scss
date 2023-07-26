@@ -85,7 +85,7 @@
 }
 
 .loader__title.is-active {
-    animation: fadeIn 1.5s both ease-in-out;
+    animation: fadeIn 1.5s forwards ease-in-out;
 }
 
 .loader__title--green {
@@ -137,7 +137,7 @@
     0% {
         opacity: 0;
     }
-    85% {
+    60% {
         opacity: 1;
     }
     100% {

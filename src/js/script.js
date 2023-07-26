@@ -19,7 +19,7 @@ $(window).on('load', function() {
 
 $(".loader__title").on('animationend', function() {
   setTimeout(function() {
-      $(".loader").animate({ opacity: 0 }, 1000, function() {
+      $(".js-loader").animate({ opacity: 0 }, 1000, function() {
           $(this).remove();
       });
   }, 500);
@@ -31,18 +31,18 @@ $(".loader__title").on('animationend', function() {
 
     $(".js-hamburger, .js-sp-nav").click(function () {
       $(".js-hamburger,.js-sp-nav").toggleClass("is-active");
-      if($("body").hasClass("is-fixed")){
+      if($("body").hasClass("is-fixed"))
+      {
         // スクロール開放
-        $("body").css("top","");
+        // $("body").css("top","");
         $("body").removeClass("is-fixed");
         window.scrollTo(0, scrollTop);
       } else {
         // スクロール禁止
         scrollTop = $(window).scrollTop();
-        $("body").css("top", -scrollTop + "px");
+        // $("body").css("top", -scrollTop + "px");
         $("body").addClass("is-fixed");
       }
-    //   swiper.update();
     });
     
     $(window).resize(function() {
@@ -59,7 +59,7 @@ $(".loader__title").on('animationend', function() {
     });
 
     //トップに戻るボタン
-    var topBtn = $('.totop');
+    var topBtn = $('.js-totop');
     topBtn.hide();
     
     // ボタンの表示設定
@@ -110,50 +110,29 @@ $(".loader__title").on('animationend', function() {
         const campaignSwiper = new Swiper(".js-campaign-swiper", {
           loop: true,
           spaceBetween: 24,
-          slidesPerView: "1.2",
           speed: 2000,
-          width: 340.8,
+          width: 280,
+          loopedSlides: 8,
           autoplay: {
             delay: 2000,
             disableOnInteraction: false,
           },
            breakpoints: {
             768: {
-          slidesPerView: "3.42",
           spaceBetween: 40,
-          width: 1235,
+          width: 333,
             },
           },
 
                  // 前後の矢印
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".js-swiper-button-next",
+    prevEl: ".js-swiper-button-prev",
   },
         });
 
-   
-
-        // ヘッダーのホバーアクション
-        $(function () {
-          const sections = $('section');
-          const navItems = $('.pc-nav__item');
-          const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-              if (entry.isIntersecting) {
-                const id = $(entry.target).attr('id');
-        
-                navItems.removeClass('is-active');
-                const navItem = navItems.filter(`[href="#${id}"]`);
-                navItem.addClass('is-active');
-              }
-            });
-          }, { threshold: 0.01 });
-        
-        });
-
         // 画像のインビュー
-let box = $('.colorbox'),
+let box = $('.js-colorbox'),
 speed = 700;  
 
 //.colorboxの付いた全ての要素に対して下記の処理を行う

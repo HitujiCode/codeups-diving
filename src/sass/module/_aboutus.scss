@@ -4,7 +4,6 @@
 }
 
 .aboutus__inner {
-    position: relative;
 }
 
 .aboutus__title {
@@ -98,16 +97,17 @@
     padding-bottom: rem(4);
 }
 
-.aboutus__coral {
-    width: rem(194);
-    height: rem(181);
-    position: absolute;
-    bottom: min(rem(-90));
-    right: calc(50% - min(48.7vw, 39.9rem));
-}
-
-.aboutus__coral img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.aboutus__container::after {
+    @include mq("md") {
+        content: "";
+        position: absolute;
+        background-image: url(../../assets/images/common/sango.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: rem(194);
+        height: rem(181);
+        bottom: min(rem(-90));
+        right: calc(50% - min(48.7vw, 39.9rem));
+    }
 }

@@ -36,12 +36,12 @@
 
 .mv__title {
     position: absolute;
-    top: 44%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     z-index: 1;
 
     @include mq("md") {
-        top: 47%;
+        top: 55.5%;
     }
 }

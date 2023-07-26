@@ -3,6 +3,7 @@
 .voice-card {
     box-shadow: 2px 2px 10px 0 rgb($black, 0.25);
     padding: rem(15) rem(16) rem(24);
+    word-break: break-word;
 
     @include mq("md") {
         padding: rem(24);
