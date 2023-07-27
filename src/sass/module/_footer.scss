@@ -34,7 +34,7 @@
     }
 }
 
-.footer__sns-icon {
+.footer__sns a {
     display: inline-block;
     width: rem(24);
     transition: opacity 0.3s ease;
@@ -75,6 +75,6 @@
 }
 
 // ホバー
-.footer__sns-icon:hover {
+.footer__sns a:hover {
     opacity: 0.6;
 }
