@@ -2,28 +2,40 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
 // ローディング画面
-$(window).on('load', function() {
-  setTimeout(function() {
-      $(".loader__title--green").addClass("is-active");
-  }, 100);
-  setTimeout(function() {
-      $(".loader__left").addClass("is-active");
-  }, 1500);
-  setTimeout(function() {
-      $(".loader__right").addClass("is-active");
-  }, 1580);
-  setTimeout(function() {
-      $(".loader__title").addClass("is-active");
-  }, 3000);
-});
+let webStorage = function () {
+  if (sessionStorage.getItem('access')) {
+      // ローディング非表示
+      $(".js-loader").hide();
+  } else {
+      // 初回アクセス時の処理
+      sessionStorage.setItem('access', 0);
 
-$(".loader__title").on('animationend', function() {
-  setTimeout(function() {
-      $(".js-loader").animate({ opacity: 0 }, 1000, function() {
-          $(this).remove();
+      $(window).on('load', function() {
+          setTimeout(function() {
+              $(".loader__title--green").addClass("is-active");
+          }, 100);
+          setTimeout(function() {
+              $(".loader__left").addClass("is-active");
+          }, 1500);
+          setTimeout(function() {
+              $(".loader__right").addClass("is-active");
+          }, 1580);
+          setTimeout(function() {
+              $(".loader__title").addClass("is-active");
+          }, 3000);
       });
-  }, 500);
-});
+
+      $(".loader__title").on('animationend', function() {
+          setTimeout(function() {
+              $(".js-loader").animate({ opacity: 0 }, 1000, function() {
+                  $(this).remove();
+              });
+          }, 500);
+      });
+  }
+}
+webStorage();
+
 
 
   // ドロワーメニュー
