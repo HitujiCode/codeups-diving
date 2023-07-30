@@ -51,6 +51,7 @@
 
 .aboutus__body {
     margin-top: rem(40);
+    padding-right: 4.5%;
 
     @include mq("md") {
         position: absolute;
@@ -79,7 +80,6 @@
 .aboutus__right {
     @include mq("md") {
         width: 45.45%;
-        margin-right: 4.5%;
     }
 }
 

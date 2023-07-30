@@ -11,8 +11,13 @@
     padding-bottom: rem(4);
 }
 
-.price-item__wrap {
+.price-item__body {
     margin-top: rem(8);
+    display: grid;
+    gap: rem(8);
+}
+
+.price-item__wrap {
     display: flex;
 }
 

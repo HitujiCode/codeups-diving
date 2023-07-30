@@ -8,7 +8,7 @@
     background-color: rgb($green, 0.68);
     width: 100%;
     height: rem(80);
-    z-index: 9999;
+    z-index: 1000;
 
     @include mq("md") {
         height: rem(90);
@@ -21,18 +21,18 @@
     display: flex;
 
     @include mq("md") {
-        padding: 0 min(1.4vw, rem(20));
+        padding-left: min(2.8vw, rem(40));
+        padding-right: min(1.3vw, rem(20));
     }
 }
 
 .header__logo {
     width: rem(102);
     height: inherit;
-    z-index: 9998;
+    z-index: 500;
 
     @include mq("md") {
-        width: rem(173);
-        padding-left: min(1.3vw, rem(20));
+        width: rem(133);
     }
 }
 

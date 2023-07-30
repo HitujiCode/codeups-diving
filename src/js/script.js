@@ -46,13 +46,11 @@ webStorage();
       if($("body").hasClass("is-fixed"))
       {
         // スクロール開放
-        // $("body").css("top","");
         $("body").removeClass("is-fixed");
         window.scrollTo(0, scrollTop);
       } else {
         // スクロール禁止
         scrollTop = $(window).scrollTop();
-        // $("body").css("top", -scrollTop + "px");
         $("body").addClass("is-fixed");
       }
     });
