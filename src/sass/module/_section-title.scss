@@ -1,65 +1,66 @@
 @use "global" as *;
 
-.section-title {
-    text-align: center;
+.section-title,
+.section-title--white {
+  text-align: center;
 }
 
 .section-title__en {
-    font-family: $third-font-family;
-    font-size: rem(32);
-    font-weight: $normal;
-    line-height: calc(40 / 32);
+  font-family: $third-font-family;
+  font-size: rem(32);
+  font-weight: $normal;
+  line-height: calc(40 / 32);
 
-    @include mq("md") {
-        font-size: rem(40);
-        line-height: 1;
-    }
+  @include mq("md") {
+    font-size: rem(40);
+    line-height: 1;
+  }
 }
 
 .section-title__en::first-letter {
-    color: $accent;
+  color: $accent;
 }
 
 .section-title__ja {
-    margin-top: rem(4);
-    font-size: rem(12);
-    font-weight: $normal;
-    line-height: calc(18 / 12);
-    color: $accent;
+  margin-top: rem(4);
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: calc(18 / 12);
+  color: $accent;
 }
 
-.section-title__en--white {
-    @extend .section-title__en;
-    @include mq("md") {
-        color: $white;
-    }
+.section-title--white .section-title__en {
+  @extend .section-title__en;
+  @include mq("md") {
+    color: $white;
+  }
 }
 
-.section-title__en--white::first-letter {
-    @include mq("md") {
-        color: $green2;
-    }
+.section-title--white .section-title__en::first-letter {
+  @include mq("md") {
+    color: $green2;
+  }
 }
 
-.section-title__ja--white {
-    @extend .section-title__ja;
-    @include mq("md") {
-        color: $white;
-    }
+.section-title--white .section-title__ja {
+  @extend .section-title__ja;
+  @include mq("md") {
+    color: $white;
+  }
 }
 
-.section-title__en--large {
-    @extend .section-title__en;
+.section-title--large .section-title__en {
+  @extend .section-title__en;
+  font-size: rem(80);
+  line-height: 1;
+
+  @include mq("md") {
     font-size: rem(80);
     line-height: 1;
-
-    @include mq("md") {
-        font-size: rem(80);
-        line-height: 1;
-    }
+  }
 }
 
-.section-title__ja--large {
-    @extend .section-title__ja;
-    margin-top: rem(-6);
+.section-title--large .section-title__ja {
+  @extend .section-title__ja;
+  margin-top: rem(-6);
 }
