@@ -4,33 +4,35 @@ jQuery(function ($) {
   // ローディング画面
   let webStorage = function () {
     if (sessionStorage.getItem("access")) {
-      // ローディング非表示
+      // ローディング非表示;
       $(".js-loader").hide();
     } else {
-      // 初回アクセス時の処理
+      // 初回アクセス時の処理;
       sessionStorage.setItem("access", 0);
 
       $(window).on("load", function () {
+        $("body").addClass("is-fixed");
         setTimeout(function () {
           $(".loader__title--green").addClass("is-active");
-        }, 100);
+        }, 0);
         setTimeout(function () {
           $(".loader__left").addClass("is-active");
-        }, 1500);
+        }, 500);
         setTimeout(function () {
           $(".loader__right").addClass("is-active");
-        }, 1580);
+        }, 580);
         setTimeout(function () {
           $(".loader__title").addClass("is-active");
-        }, 3000);
+        }, 1400);
       });
 
       $(".loader__title").on("animationend", function () {
         setTimeout(function () {
-          $(".js-loader").animate({ opacity: 0 }, 1000, function () {
+          $(".js-loader").animate({ opacity: 0 }, 500, function () {
+            $("body").removeClass("is-fixed");
             $(this).remove();
           });
-        }, 500);
+        }, 300);
       });
     }
   };

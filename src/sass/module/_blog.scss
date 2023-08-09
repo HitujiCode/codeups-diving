@@ -1,54 +1,55 @@
 @use "global" as *;
 
 .blog {
-    position: relative;
+  position: relative;
+}
+
+.blog::before {
+  @include mq("md") {
+    content: "";
+    width: 100%;
+    min-height: rem(500);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url(../../assets/images/common/blog-bg.webp);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
 }
 
 .blog::after {
-    @include mq("md") {
-        content: "";
-        position: absolute;
-        background-image: url(../../assets/images/common/kingyo-blog.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: rem(437);
-        height: rem(201);
-        top: rem(28);
-        left: calc(50% - min(49vw, rem(622)));
-    }
-}
-
-.blog__bg {
-    @include mq("md") {
-        width: 100%;
-        min-height: rem(500);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        background-image: url(../../assets/images/common/blog-bg.webp);
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: cover;
-    }
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    background-image: url(../../assets/images/common/kingyo-blog.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: rem(437);
+    height: rem(201);
+    top: rem(28);
+    left: calc(50% - min(49vw, rem(622)));
+  }
 }
 
 .blog__cards {
-    margin-top: rem(28);
+  margin-top: rem(28);
 
-    @include mq("md") {
-        margin-top: rem(80);
-    }
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }
 
 .blog__button {
-    text-align: center;
-    margin-top: rem(40);
-    padding-bottom: rem(4);
+  text-align: center;
+  margin-top: rem(40);
+  padding-bottom: rem(4);
 
-    @include mq("md") {
-        margin-top: rem(80);
-    }
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }
