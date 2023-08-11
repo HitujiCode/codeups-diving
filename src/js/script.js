@@ -43,15 +43,15 @@ jQuery(function ($) {
 
   $(".js-hamburger, .js-sp-nav").click(function () {
     $(".js-hamburger,.js-sp-nav").toggleClass("is-active");
-    if ($("body").hasClass("is-fixed")) {
-      // スクロール開放
-      $("body").removeClass("is-fixed");
-      window.scrollTo(0, scrollTop);
-    } else {
-      // スクロール禁止
-      scrollTop = $(window).scrollTop();
-      $("body").addClass("is-fixed");
-    }
+    // if ($("body").hasClass("is-fixed")) {
+    //   // スクロール開放
+    //   $("body").removeClass("is-fixed");
+    //   window.scrollTo(0, scrollTop);
+    // } else {
+    //   // スクロール禁止
+    //   scrollTop = $(window).scrollTop();
+    //   $("body").addClass("is-fixed");
+    // }
   });
 
   $(window).resize(function () {
