@@ -5,7 +5,7 @@
   gap: rem(16);
 }
 
-.global-nav--sp-nav {
+.global-nav--scroll {
   @extend .global-nav;
   overflow-y: auto;
   overscroll-behavior: none;
