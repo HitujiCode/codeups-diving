@@ -42,9 +42,12 @@ body {
   font-family: $base-font-family;
   color: $green;
   position: relative;
+  overflow-y: scroll;
 }
 
 body.is-fixed {
-  overflow: hidden;
-  height: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }

@@ -28,11 +28,11 @@ jQuery(function ($) {
 
       $(".loader__title").on("animationend", function () {
         setTimeout(function () {
-          $(".js-loader").animate({ opacity: 0 }, 400, function () {
+          $(".js-loader").animate({ opacity: 0 }, 300, function () {
             $("body").removeClass("is-fixed");
             $(this).remove();
           });
-        }, 500);
+        }, 300);
       });
     }
   };

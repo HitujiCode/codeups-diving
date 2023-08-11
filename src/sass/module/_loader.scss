@@ -5,7 +5,7 @@
   height: calc(100vh + 1px);
   background-color: $white;
   position: fixed;
-  z-index: 99999;
+  z-index: 9999;
   overscroll-behavior: none;
 }
 
@@ -41,12 +41,12 @@
 
 .loader__left.is-active {
   opacity: 1;
-  animation: slideLeft 1s both ease-out;
+  animation: slideLeft 0.6s both ease-out;
 }
 
 .loader__right.is-active {
   opacity: 1;
-  animation: slideRight 1s both ease-out;
+  animation: slideRight 0.6s both ease-out;
 }
 
 .loader__title {
@@ -68,6 +68,7 @@
 .loader__main {
   font-family: $fourth-font-family;
   font-size: rem(40);
+  font-weight: $normal;
   line-height: calc(48 / 40);
   letter-spacing: 0.54em;
   text-indent: 0.54em;
@@ -86,7 +87,7 @@
 }
 
 .loader__title.is-active {
-  animation: fadeIn 0.5s forwards ease-in-out;
+  animation: fadeIn 0.7s forwards ease-in-out;
 }
 
 .loader__title--green {
@@ -100,7 +101,7 @@
 }
 
 .loader__title--green.is-active {
-  animation: fadeInOut 1s forwards ease-in;
+  animation: fadeInOut 0.5s forwards ease-in;
 }
 
 @keyframes slideLeft {
@@ -138,7 +139,7 @@
   0% {
     opacity: 0;
   }
-  60% {
+  10% {
     opacity: 1;
   }
   100% {
