@@ -23,16 +23,16 @@ jQuery(function ($) {
         }, 580);
         setTimeout(function () {
           $(".loader__title").addClass("is-active");
-        }, 1400);
+        }, 1200);
       });
 
       $(".loader__title").on("animationend", function () {
         setTimeout(function () {
-          $(".js-loader").animate({ opacity: 0 }, 500, function () {
+          $(".js-loader").animate({ opacity: 0 }, 400, function () {
             $("body").removeClass("is-fixed");
             $(this).remove();
           });
-        }, 300);
+        }, 500);
       });
     }
   };
