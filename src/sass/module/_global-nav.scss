@@ -2,7 +2,7 @@
 
 .global-nav {
   display: grid;
-  grid-template-columns: 51% 49%;
+  grid-template-columns: 48.1% 47.27%;
   gap: rem(16);
 
   @include mq("md") {
